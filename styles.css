@@ -434,6 +434,55 @@ span{
     cursor: pointer;
 }
 
+.contacthome {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contacthome-img img {
+    width: 35vw;
+}
+
+.contacthome-content h3 {
+    font-size: 3.2rem;
+    font-weight: 700;
+    color: white;
+}
+
+.contacthome-content h1 {
+    font-size: 5.6rem;
+    font-weight: 700;
+    line-height: 1.3;
+    color: white;
+}
+
+.contacthome-content p {
+    font-size: 
+    1.6rem;
+}
+
+.social-media a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 4rem;
+    height: 4rem;
+    background: rgba(255,255,255,0);
+    border: .2rem solid aqua;
+    border-radius: 50%;
+    font-size: 2rem;
+    color: aqua;
+    margin: 3rem 1.5rem 3rem 0;
+    transition: .5s ease;
+}
+
+.social-media a:hover {
+    background: aqua;
+    color: lightslategray;
+    box-shadow: 0 0 1rem aqua;
+}
+
 .footer {
     display: flex;
     justify-content: space-between;
