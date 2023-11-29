@@ -21,6 +21,7 @@ body {
     padding: 0;
     background-color: lightslategray; /* Add a light background color */
     
+    
 }
 
 
@@ -161,6 +162,46 @@ span{
     color: white;
 }
 
+.projects {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    background:  rgb(78, 96, 107);
+}
+
+.projects-videos{
+    width: 35vw;
+}
+
+.projects-content {
+    padding: 150px;
+}
+
+.heading-projects{
+    text-align: center;
+    font-size: 4.5rem;
+}
+
+.projects-content h2 {
+    text-align: left;
+    line-height: 1.2;
+    color: white;
+}
+
+.projects-content h3 {
+    font-size: 2.6rem;
+    color: white;
+}
+
+.projects-content p {
+    font-size: 1.6rem;
+    margin: 2rem 0 3rem;
+    color: white;
+}
+
+
+
 .services h2 {
     margin-bottom: 5rem;
 }
@@ -204,7 +245,7 @@ span{
     color: white;
 }
 
-@keyframes slide{
+@keyframes slide {
     from {
         transform: translateX(0);
     }
@@ -213,22 +254,64 @@ span{
     }
 }
 
-.videos{
+.videos {
     overflow: hidden;
     padding: 60px 0;
+    background: lightslategray;
     white-space: nowrap;
+    position: relative;
+    border-radius: 3rem;
+    
 }
 
-.videos-slide{
+.videos::before,
+.videos::after {
+    position: absolute;
+    top: 0;
+    width: 50px;
+    height: 100%;
+    content: "";
+    z-index: 2;
+}
+
+.videos::before{
+    left: 0;
+    background: linear-gradient(to left, rgba(255,255,255,0), lightslategray);
+}
+
+.videos::after{
+    right: 0;
+    background: linear-gradient(to right, rgba(255,255,255,0), lightslategray);
+}
+
+
+
+.videos:hover .videos-slide{
+    animation-play-state: paused;
+}
+.videos-slide {
     display: inline-block;
-    animation: 20s slide infinite linear;
+    animation: 36s slide infinite linear;
 }
-
-.videos-slide iframe{
+.videos-slide img {
     height: 300px;
     margin: 0 40px;
+    border-radius: 2rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Add transition for smooth effect */
+
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); /* Add a box shadow for a cool effect */
+    
 }
-  
+
+.videos-slide img:hover {
+    transform: scale(1.1); /* Increase the scale on hover for the specific image */
+}
+
+.videos:hover .videos-slide {
+    animation-play-state: paused;
+}
+
+
   
 
 
